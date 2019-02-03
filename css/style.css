@@ -1,0 +1,190 @@
+@charset "utf-8";
+
+* { box-sizing: border-box;}
+
+.img-thumbnail{
+  background-color: #e0e0e0;
+  border-color: #e0e0e0;
+}
+
+
+body { 
+  font-family: sans-serif; 
+  background-color: #f4f4f4;
+  
+  margin: 50px auto;
+  max-width: 90%;}
+
+  header, #aaa{
+    background-color: black;
+  }
+
+p{
+  color: black;
+}
+
+.vertical-center {
+  min-height: 60%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 60vh; /* These two lines are counted as one :-)       */
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+}
+
+#site-title{
+  font-family: "daniel";
+  src: url("./font/daniel.ttf");
+}
+
+
+/* ---- grid ---- */
+.grid li {
+  display: block;
+}
+.grid {
+  background: #ecefea;
+}
+
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.grid-sizer{
+  width: 15%;
+}
+
+/* ---- grid-item ---- */
+
+/*.grid-item {
+  width: 15%;
+  float: left;
+}*/
+
+.grid-item--width2 { width: 320px; }
+.grid-item--width3 { width: 480px; }
+.grid-item--width4 { width: 640px; }
+
+.grid-item--height2 { height: 200px; }
+.grid-item--height3 { height: 260px; }
+.grid-item--height4 { height: 360px; }
+
+
+
+
+.grid-item:hover {
+  margin:5px;
+  line-height: 133px;
+  cursor:pointer;
+}
+.grid img{
+  width: 100%;
+  opacity: 0.8;
+}
+.grid img:hover{
+  opacity: 1;
+}
+.grid-item--gran {
+  width: 66%;
+  z-index: 2; /* above other items */
+}
+.grid-item--gran img{
+  opacity:  1;
+}
+
+#site-title{
+  color:#ecefea;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+header a{
+  color:white;
+  text-decoration: none;
+}
+
+footer p{
+  color:black;
+  text-decoration: none;
+}
+.modal-content {
+    background-color:#f4f4f4;
+}
+
+#contacte,#quisoc{
+  
+  display: none;
+  color:#bee5b0;
+}
+/* Animation */
+.anim {
+  position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  /*font-size: 2em;*/
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #000, #f44242, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 0, 0, 0);
+
+}
+.aFast{
+  animation: animate 2s linear infinite;
+}
+
+.aSlow {
+
+   animation: animate 10s linear infinite;
+ }
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+
+
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      border-style: none;
+    }
+
+    .container-fluid{
+      background-color: #e0e0e0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+   
+    /* Set black background color, white text and some padding */
+    footer {
+      
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;}
+      
+    }
+  .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+      background-color: #222;
+      color:#ecefea;
+    }
